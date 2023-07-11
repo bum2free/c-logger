@@ -8,7 +8,9 @@
 #else
  #include <pthread.h>
  #include <sys/time.h>
+#ifndef __QNX__
  #include <sys/syscall.h>
+#endif
  #include <unistd.h>
 #endif /* defined(_WIN32) || defined(_WIN64) */
 

@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 2.8.11)
 project(logger C)
 
+if (NOT "${CMAKE_SYSTEM_NAME}" STREQUAL "QNX")
 set(CMAKE_C_FLAGS "-Wall -std=c89")
+endif()
 set(CMAKE_C_FLAGS_RELEASE "-O2 -DNDEBUG")
 set(CMAKE_C_FLAGS_DEBUG "-g")
 
